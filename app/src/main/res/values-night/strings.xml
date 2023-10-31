@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="spinloop">SpinLoop</string>
+    <string name="spin">Spin</string>
+    <string name="wybierz_piwo">Wybierz piwo</string>
+    <string name="nalej_piwo">nalej piwo</string>
+</resources>
