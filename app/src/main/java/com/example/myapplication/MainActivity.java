@@ -1,7 +1,10 @@
 package com.example.myapplication;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 
 
@@ -49,11 +52,16 @@ public class MainActivity extends AppCompatActivity {
             "bursztynowe3",
             "bursztynowe4"
     };
+
+    static Bitmap selectedBitmap;
+    static int isBitmap = 0;
     boolean isTrue = false;
 
     int lech = R.drawable.lech;
     int pan = R.drawable.pan;
     int zywiec = R.drawable.zywiec;
+
+
 
 
     @Override
@@ -87,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             List<String> selectedBeers = new ArrayList<>();
             int selectedImageResource = 0;
 
+
             switch (selectedSpinnerValue) {
                 case 0:
                     selectedBeers = Arrays.asList(jasnebeers);
@@ -103,11 +112,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
-            for (String beer : selectedBeers) {
-                beersList.add(new beer(beer, selectedImageResource));
-            }
 
-            recyclerView.setAdapter(new MyAdapter(getApplicationContext(), beersList,recyclerView));
+            for (String beer : selectedBeers) {
+                        beersList.add(new beer(beer, selectedImageResource));
+                    }
+
+
+            recyclerView.setAdapter(new MyAdapter(getApplicationContext(), beersList));
         });
 
         Button spinButton = findViewById(R.id.spin);
@@ -124,19 +135,9 @@ public class MainActivity extends AppCompatActivity {
             spin(isTrue,recyclerView,-1,360);
 
         });
-        //ViewGroup parentView = findViewById(R.id.linearLayout);
-
-        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View inflatedLayout = inflater.inflate(R.layout.list_item, recyclerView, false);
-
-        Button pourGlass = inflatedLayout.findViewById(R.id.pourGlass);
-
-
-
 
 
     }
-
 
 
 
@@ -158,7 +159,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public static void setBitmap(Bitmap bitmap) {
+        isBitmap = 1;
+        selectedBitmap = bitmap;
+
     }
+
+
+
+}
 
 
 

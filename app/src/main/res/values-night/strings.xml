@@ -4,4 +4,6 @@
     <string name="spin">Spin</string>
     <string name="wybierz_piwo">Wybierz piwo</string>
     <string name="nalej_piwo">nalej piwo</string>
+    <string name="narysuj_piwo">narysuj piwo</string>
+    <string name="zapisz_obrazek">zapisz obrazek</string>
 </resources>
