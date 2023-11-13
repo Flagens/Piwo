@@ -36,7 +36,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
 
-
     public MyAdapter(Context context, List<beer> beersList) {
         this.context = context;
         this.beersList = beersList;

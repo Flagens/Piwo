@@ -140,8 +140,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     public void spin(boolean isTrue,RecyclerView view,int amount,int degrees) {
         if (isTrue) {
             RotateAnimation rotate = new RotateAnimation(0, degrees, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
@@ -164,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
         selectedBitmap = bitmap;
 
     }
-
 
 
 }
